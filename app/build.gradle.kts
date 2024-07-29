@@ -47,11 +47,11 @@ dependencies {
     implementation(projects.core.designsystem)
     implementation(projects.feature.home)
 
-    /*implementation(projects.core.common)
+    implementation(projects.core.common)
     implementation(projects.core.data)
     implementation(projects.core.model)
     implementation(projects.core.network)
-    implementation(projects.core.domain)*/
+    implementation(projects.core.domain)
 
     implementation(libs.androidx.core.splashscreen)
     implementation(libs.androidx.core.ktx)

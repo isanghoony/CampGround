@@ -1,4 +1,4 @@
-package com.isanghoony.campground
+package com.isanghoony.data
 
 import org.junit.Test
 

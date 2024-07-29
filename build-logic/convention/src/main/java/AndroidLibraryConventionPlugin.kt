@@ -15,38 +15,38 @@ class AndroidLibraryConventionPlugin: Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             with(pluginManager) {
-                apply("com.android.library")
-                apply("org.jetbrains.kotlin.android")
+                apply("com.android.library") // 안드로이드 라이브러리 플러그인 적용
+                apply("org.jetbrains.kotlin.android") // 코틀린 안드로이드 플러그인 적용
             }
 
             extensions.configure<LibraryExtension> {
-                configureKotlinAndroid(this)
+                configureKotlinAndroid(this) // Kotlin Android 설정 함수 호출
 
                 configureBuildTypes(
                     commonExtension = this,
-                    extensionType = ExtensionType.LIBRARY
+                    extensionType = ExtensionType.LIBRARY // 라이브러리 빌드 타입 설정 함수 호출
                 )
 
                 defaultConfig {
-                    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-                    consumerProguardFiles("consumer-rules.pro")
+                    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" // 테스트 인스트루먼트 러너 설정
+                    consumerProguardFiles("consumer-rules.pro") // ProGuard 파일 설정
                 }
 
-                testOptions{
+                testOptions {
                     unitTests.all { test ->
-                        test.useJUnitPlatform()
+                        test.useJUnitPlatform() // JUnit Platform 사용 설정
                     }
                 }
 
-                configureKotlinAndroid(commonExtension = this)
+                configureKotlinAndroid(commonExtension = this) // 중복된 Kotlin Android 설정 함수 호출 (필요 시 제거)
                 configureBuildTypes(
                     commonExtension = this,
-                    extensionType = ExtensionType.LIBRARY
+                    extensionType = ExtensionType.LIBRARY // 중복된 빌드 타입 설정 함수 호출 (필요 시 제거)
                 )
             }
 
             dependencies {
-                "testImplementation"(kotlin("test"))
+                "testImplementation"(kotlin("test")) // Kotlin 테스트 라이브러리 추가
             }
         }
     }

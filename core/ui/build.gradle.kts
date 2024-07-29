@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.campground.core.ui"
+    namespace = "com.isanghoony.ui"
 }
 
 dependencies {
     api(projects.core.designsystem)
-    //api(projects.core.model)
+    api(projects.core.model)
     api(libs.androidx.metrics)
 }

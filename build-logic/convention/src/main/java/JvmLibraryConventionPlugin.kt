@@ -6,9 +6,9 @@ class JvmLibraryConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             with(pluginManager) {
-                apply("org.jetbrains.kotlin.jvm")
+                apply("org.jetbrains.kotlin.jvm") // Kotlin JVM 플러그인 적용
             }
-            configureKotlinJvm()
+            configureKotlinJvm() // Kotlin JVM 설정 함수 호출
         }
     }
 }

@@ -5,9 +5,9 @@ plugins {
 }
 
 android {
-    namespace = "com.campground.feature.home"
+    namespace = "com.isanghoony.feature.home"
 }
 
 dependencies {
-//    implementation(projects.core.data)
+    implementation(projects.core.data)
 }

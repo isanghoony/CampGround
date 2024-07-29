@@ -8,13 +8,12 @@ class AndroidApplicationComposeConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             with(pluginManager) {
-                apply("com.android.application")
-                apply("org.jetbrains.kotlin.android")
+                apply("com.android.application") // 안드로이드 애플리케이션 플러그인 적용
+                apply("org.jetbrains.kotlin.android") // 코틀린 안드로이드 플러그인 적용
             }
 
             val extension = extensions.getByType<ApplicationExtension>()
-            configureAndroidCompose(extension)
+            configureAndroidCompose(extension) // Android Compose 설정 함수 호출
         }
     }
-
 }
