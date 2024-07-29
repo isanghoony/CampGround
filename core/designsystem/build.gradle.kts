@@ -10,4 +10,6 @@ android {
 
 dependencies {
     api(libs.bundles.compose)
+    api(libs.androidx.compose.material3)
+    api(libs.androidx.compose.material.iconsExtended)
 }
