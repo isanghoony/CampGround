@@ -10,19 +10,17 @@ import com.isanghoony.home.HomeRoute
 const val HOME_GRAPH_ROUTE_PATTERN = "home_graph"
 const val HOME_ROUTE = "home_route"
 
-fun NavController.navigationToHomeGraph(navOptions: NavOptions? = null){
+fun NavController.navigationToHomeHomeScreen(navOptions: NavOptions? = null){
     this.navigate(HOME_GRAPH_ROUTE_PATTERN, navOptions)
 }
 
-fun NavGraphBuilder.homeGraph(
-    nestedGraphs: NavGraphBuilder.() -> Unit) {
+fun NavGraphBuilder.homeScreen(onHomeClick:(String) -> Unit) {
     navigation(
         route = HOME_GRAPH_ROUTE_PATTERN,
         startDestination = HOME_ROUTE,
     ) {
         composable(route = HOME_ROUTE) {
-            HomeRoute()
+            HomeRoute(onHomeClick = onHomeClick)
         }
-        nestedGraphs()
     }
 }

@@ -5,8 +5,8 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import com.isanghoony.campground.ui.CampGroundState
 import com.isanghoony.home.navigation.HOME_GRAPH_ROUTE_PATTERN
-import com.isanghoony.home.navigation.homeGraph
-import com.isanghoony.mypage.navigation.myPageGraph
+import com.isanghoony.home.navigation.homeScreen
+import com.isanghoony.mypage.navigation.myPageScreen
 
 @Composable
 fun CampGroundNavHost (
@@ -19,7 +19,7 @@ fun CampGroundNavHost (
         startDestination = startDestination,
         modifier = modifier,
     ){
-        homeGraph { }
-        myPageGraph {  }
+        homeScreen { }
+        myPageScreen {  }
     }
 }

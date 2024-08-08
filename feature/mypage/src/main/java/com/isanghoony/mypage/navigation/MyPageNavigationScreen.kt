@@ -10,11 +10,11 @@ import com.isanghoony.mypage.MyPageRoute
 const val MY_PAGE_GRAPH_ROUTE_PATTERN = "my_page_graph"
 const val MY_PAGE_ROUTE = "my_page_route"
 
-fun NavController.navigationToMyPageGraph(navOptions: NavOptions? = null){
+fun NavController.navigationToMyPageScreen(navOptions: NavOptions? = null){
     this.navigate(MY_PAGE_GRAPH_ROUTE_PATTERN, navOptions)
 }
 
-fun NavGraphBuilder.myPageGraph(
+fun NavGraphBuilder.myPageScreen(
     nestedGraphs: NavGraphBuilder.() -> Unit) {
     navigation(
         route = MY_PAGE_GRAPH_ROUTE_PATTERN,

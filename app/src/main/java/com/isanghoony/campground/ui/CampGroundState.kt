@@ -14,13 +14,13 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navOptions
 import com.isanghoony.campground.navigation.TopLevelDestination
 import com.isanghoony.home.navigation.HOME_ROUTE
-import com.isanghoony.home.navigation.navigationToHomeGraph
+import com.isanghoony.home.navigation.navigationToHomeHomeScreen
 import com.isanghoony.mypage.navigation.MY_PAGE_ROUTE
-import com.isanghoony.mypage.navigation.navigationToMyPageGraph
+import com.isanghoony.mypage.navigation.navigationToMyPageScreen
 import com.isanghoony.ui.TrackDisposableJank
 import kotlinx.coroutines.CoroutineScope
 
-
+// Composable 함수로 CampGroundState를 기억하고 반환
 @Composable
 fun rememberCampGroundState(
     coroutineScope: CoroutineScope = rememberCoroutineScope(),
@@ -31,12 +31,14 @@ fun rememberCampGroundState(
     return remember(navController, coroutineScope) { CampGroundState(navController, coroutineScope) }
 }
 
-
+// Stable 어노테이션이 붙은 클래스, 네비게이션 상태를 관리
 @Stable
-class CampGroundState(val navController: NavHostController,val coroutineScope: CoroutineScope){
+class CampGroundState(val navController: NavHostController, val coroutineScope: CoroutineScope) {
+    // 현재 목적지를 가져오는 프로퍼티
     val currentDestination: NavDestination?
         @Composable get() = navController.currentBackStackEntryAsState().value?.destination
 
+    // 현재 TopLevel 목적지를 가져오는 프로퍼티
     val currentTopLevelDestination: TopLevelDestination?
         @Composable get() = when (currentDestination?.route) {
             HOME_ROUTE -> TopLevelDestination.HOME
@@ -44,8 +46,10 @@ class CampGroundState(val navController: NavHostController,val coroutineScope: C
             else -> null
         }
 
+    // TopLevel 목적지 리스트
     val topDestinations : List<TopLevelDestination> = TopLevelDestination.entries
 
+    // TopLevel 목적지로 네비게이션하는 함수
     fun navigateToTopDestination(topDestination: TopLevelDestination) {
         trace("Navigation: ${topDestination.name}") {
             val topNavOptions = navOptions {
@@ -57,15 +61,14 @@ class CampGroundState(val navController: NavHostController,val coroutineScope: C
             }
 
             when (topDestination) {
-                TopLevelDestination.HOME -> navController.navigationToHomeGraph(topNavOptions)
-                TopLevelDestination.MY_PAGE -> navController.navigationToMyPageGraph(topNavOptions)
+                TopLevelDestination.HOME -> navController.navigationToHomeHomeScreen(topNavOptions)
+                TopLevelDestination.MY_PAGE -> navController.navigationToMyPageScreen(topNavOptions)
             }
         }
     }
-
 }
 
-
+// 네비게이션 상태를 추적하는 사이드 이펙트 함수
 @Composable
 private fun NavigationTrackingSideEffect(navController: NavHostController) {
     TrackDisposableJank(navController) { metricsHolder ->
@@ -75,6 +78,7 @@ private fun NavigationTrackingSideEffect(navController: NavHostController) {
 
         navController.addOnDestinationChangedListener(listener)
 
+        // 컴포저블이 제거될 때 리스너를 제거
         onDispose {
             navController.removeOnDestinationChangedListener(listener)
         }
