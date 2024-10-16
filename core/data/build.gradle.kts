@@ -4,7 +4,8 @@ plugins {
 }
 
 android {
-    namespace = "com.isanghoony.core.data"
+
+    namespace = "com.campground.core.data"
 }
 
 dependencies {

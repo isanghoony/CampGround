@@ -16,6 +16,9 @@ android {
         versionCode = 1
         versionName = "1.0"
 
+        buildConfigField(type = "String", name = "API_BASE_URL", value = "http://apis.data.go.kr/B551011/GoCamping")
+        buildConfigField(type = "String", name = "API_BASE_SERVER_KEY", value = "zNpViQCKKUS7WFWxKYkjnbuV7J1WAX4k8qiXZXCOb7lIi6lyDUwWxA97DGDOS9Jl2mp/+7/8KV/hsifEWiaaSA==")
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
@@ -45,8 +48,8 @@ android {
 dependencies {
     implementation(projects.core.ui)
     implementation(projects.core.designsystem)
-    implementation(projects.feature.home)
-    implementation(projects.feature.mypage)
+/*    implementation(projects.feature.home)
+    implementation(projects.feature.mypage)*/
 
     implementation(projects.core.common)
     implementation(projects.core.data)

@@ -1,9 +1,8 @@
 import com.android.build.api.dsl.LibraryExtension
-import com.android.build.api.variant.LibraryAndroidComponentsExtension
-import com.isanghoony.campground.ExtensionType
-import com.isanghoony.campground.configureBuildTypes
-import com.isanghoony.campground.configureKotlinAndroid
-import com.isanghoony.campground.libs
+import com.campground.ExtensionType
+import com.campground.configureBuildTypes
+import com.campground.configureKotlinAndroid
+import com.campground.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -44,9 +43,11 @@ class AndroidLibraryConventionPlugin: Plugin<Project> {
                     extensionType = ExtensionType.LIBRARY // 중복된 빌드 타입 설정 함수 호출 (필요 시 제거)
                 )
             }
-
             dependencies {
-                "testImplementation"(kotlin("test")) // Kotlin 테스트 라이브러리 추가
+                add("androidTestImplementation", kotlin("test"))
+                add("testImplementation", kotlin("test"))
+
+                add("implementation", libs.findLibrary("androidx.tracing.ktx").get())
             }
         }
     }

@@ -1,16 +1,18 @@
 plugins {
     alias(libs.plugins.campground.android.library)
+    //alias(libs.plugins.campground.android.library.jacoco)
+    id("com.google.devtools.ksp")
 }
 
 android {
-    namespace = "com.isanghoony.core.domain"
+    namespace = "com.campground.core.domain"
 }
 
 dependencies {
     api(projects.core.data)
     api(projects.core.model)
 
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.javax.inject)
+
+    testImplementation(projects.core.testing)
 }

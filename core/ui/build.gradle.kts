@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.isanghoony.ui"
+    namespace = "com.campground.core.ui"
 }
 
 dependencies {

@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.isanghoony.designsystem"
+    namespace = "com.campground.core.designsystem"
 }
 
 dependencies {

@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.isanghoony.common"
+    namespace = "com.campground.core.common"
     compileSdk = 34
 
     defaultConfig {
