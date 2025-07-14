@@ -17,7 +17,7 @@ activityCompose = "1.9.0"
 composeBom = "2024.06.00"
 compose = "1.6.10"
 okhttp = "4.12.0"
-#composeCompiler = "1.5.14"
+composeCompiler = "1.5.14"
 appcompat = "1.7.0"
 material = "1.12.0"
 jetbrainsKotlinJvm = "2.0.0"
@@ -122,6 +122,7 @@ androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-
 androidx-compose-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata" }
 androidx-compose-material-iconsExtended = { group = "androidx.compose.material", name = "material-icons-extended" }
 androidx-compose-runtime-tracing = { group = "androidx.compose.runtime", name = "runtime-tracing", version.ref = "androidxComposeRuntimeTracing" }
+compose-gradle-plugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
 
 # coil
 coil-kt = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
@@ -182,7 +183,7 @@ retrofit = [
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose" }
+jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "compose" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
@@ -192,8 +193,8 @@ hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 campground-android-application = { id = "campground.android.application", version = "unspecified" } # AndroidApplicationConventionPlugin
 campground-android-application-compose = { id = "campground.android.application.compose", version = "unspecified" } # AndroidApplicationComposeConventionPlugin
 campground-android-library = { id = "campground.android.library", version = "unspecified" } # AndroidLibraryConventionPlugin
-campground-android-library-compose = { id = "campground.android.library.compose", version = "unspecified" } # AndroidLibraryComposeConventionPlugin
-campground-android-feature-ui = { id = "campground.android.feature.ui", version = "unspecified" } # AndroidFeatureUiConventionPlugin :feature 하위 모듈에 적용
+campground-android-compose = { id = "campground.android.compose", version = "unspecified" } # AndroidLibraryComposeConventionPlugin
+campground-android-feature = { id = "campground.android.feature.ui", version = "unspecified" } # AndroidFeatureUiConventionPlugin :feature 하위 모듈에 적용
 campground-android-hilt = { id = "campground.android.hilt", version = "unspecified" } # AndroidHiltConventionPlugin
 campground-android-retrofit = { id = "campground.android.retrofit", version = "unspecified" } #AndroidRetrofitConventionPlugin
 campground-jvm-library = { id = "campground.jvm.library", version = "unspecified" } #JvmLibraryConventionPlugin
