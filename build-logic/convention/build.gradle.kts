@@ -18,6 +18,7 @@ tasks.withType<KotlinCompile>().configureEach {
 }
 
 dependencies {
+    compileOnly(libs.compose.gradle.plugin)
     compileOnly(libs.android.gradlePlugin)
     compileOnly(libs.android.tools.common)
     compileOnly(libs.kotlin.gradlePlugin)
@@ -50,7 +51,7 @@ gradlePlugin {
         }
 
         register("androidLibraryCompose") {
-            id = "campground.android.library.compose"
+            id = "campground.android.compose"
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
 

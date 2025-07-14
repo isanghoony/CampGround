@@ -12,6 +12,19 @@ internal fun Project.configureAndroidCompose(
 ) {
     commonExtension.apply {
         dependencies {
+            add("implementation", libs.findLibrary("androidx-compose-ui").get())
+            add("implementation", libs.findLibrary("androidx-compose-runtime-livedata").get())
+            add("implementation", libs.findLibrary("androidx-compose-material3").get())
+            add("implementation", libs.findLibrary("androidx-compose-ui-tooling").get())
+            add("implementation", libs.findLibrary("androidx-compose-ui-tooling-preview").get())
+            add("implementation", libs.findLibrary("androidx-compose-ui-graphics").get())
+            add("implementation", libs.findLibrary("androidx-lifecycle-runtime-compose").get())
+            add("implementation", libs.findLibrary("androidx-lifecycle-viewmodel-compose").get())
+            add("implementation", libs.findLibrary("androidx-activity-compose").get())
+            add("implementation", libs.findLibrary("androidx-foundation").get())
+            add("implementation", libs.findLibrary("androidx-foundation-layout").get())
+            add("implementation", libs.findLibrary("androidx-navigation-compose").get())
+
             val bom = libs.findLibrary("androidx-compose-bom").get()
             add("implementation", platform(bom))
             add("androidTestImplementation", platform(bom))

@@ -1,7 +1,6 @@
 package com.campground.core.network.api
 
 import com.campground.core.model.CampBasic
-import com.campground.core.network.BuildConfig
 import com.campground.core.network.CampResult
 import retrofit2.http.GET
 import retrofit2.http.Query

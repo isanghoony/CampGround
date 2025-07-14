@@ -1,7 +1,5 @@
 plugins {
-    alias(libs.plugins.compose.compiler)
-    alias(libs.plugins.campground.android.library)
-    alias(libs.plugins.campground.android.library.compose)
+    alias(libs.plugins.campground.android.compose)
 }
 
 android {
@@ -9,7 +7,7 @@ android {
 }
 
 dependencies {
-    api(projects.core.designsystem)
-    api(projects.core.model)
-    api(libs.androidx.metrics)
+    implementation(projects.core.designsystem)
+    implementation(projects.core.model)
+    implementation(libs.androidx.metrics)
 }

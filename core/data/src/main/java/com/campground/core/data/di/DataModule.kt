@@ -1,7 +1,7 @@
 package com.campground.core.data.di
 
-import com.campground.core.data.repository.DefaultCampRepository
 import com.campground.core.data.repository.CampRepository
+import com.campground.core.data.repository.DefaultCampRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

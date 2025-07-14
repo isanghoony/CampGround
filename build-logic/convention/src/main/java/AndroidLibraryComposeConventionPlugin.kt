@@ -9,7 +9,8 @@ class AndroidLibraryComposeConventionPlugin: Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             with(pluginManager) {
-                apply("campground.android.library") // 커스텀 안드로이드 라이브러리 플러그인 적용
+                apply("campground.android.library")
+                apply("org.jetbrains.kotlin.plugin.compose")
             }
 
             val extension = extensions.getByType<LibraryExtension>()

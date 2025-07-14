@@ -3,7 +3,6 @@ package com.campground.core.data.repository
 import com.campground.core.model.CampBasic
 import com.campground.core.network.CampResult
 import com.campground.core.network.NetworkDataSource
-import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 internal class DefaultCampRepository @Inject constructor(
