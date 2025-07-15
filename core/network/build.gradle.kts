@@ -11,8 +11,8 @@ android {
     namespace = "com.campground.core.network"
 }
 dependencies {
-    api(projects.core.common)
-    api(projects.core.model)
+    implementation(projects.core.common)
+    implementation(projects.core.model)
 
     implementation(libs.androidx.tracing.ktx)
     implementation(libs.coil.kt)

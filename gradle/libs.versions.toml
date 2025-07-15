@@ -1,8 +1,8 @@
 [versions]
 projectVersionName = "1.0.0"
 projectMinSdk = "26"
-projectTargetSdk = "34"
-projectCompileSdk = "34"
+projectTargetSdk = "35"
+projectCompileSdk = "35"
 projectVersionCode = "1"
 projectApplicationId = "com.isanghoony.campground"
 jacoco = "0.8.7"

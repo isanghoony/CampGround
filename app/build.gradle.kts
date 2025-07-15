@@ -13,7 +13,7 @@ android {
         minSdk = 26
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.0.1"
 
         buildConfigField(type = "String", name = "API_BASE_URL", value = "\"http://apis.data.go.kr/B551011/GoCamping\"")
         buildConfigField(type = "String", name = "API_BASE_SERVER_KEY", value = "\"zNpViQCKKUS7WFWxKYkjnbuV7J1WAX4k8qiXZXCOb7lIi6lyDUwWxA97DGDOS9Jl2mp/+7/8KV/hsifEWiaaSA==\"")

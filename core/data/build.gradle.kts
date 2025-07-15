@@ -4,14 +4,13 @@ plugins {
 }
 
 android {
-
     namespace = "com.campground.core.data"
 }
 
 dependencies {
-    api(projects.core.common)
-    api(projects.core.network)
-    api(projects.core.model)
+    implementation(projects.core.common)
+    implementation(projects.core.network)
+    implementation(projects.core.model)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

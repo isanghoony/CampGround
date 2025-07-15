@@ -66,19 +66,16 @@ private fun Project.getPropertyFromFiles(propertyName: String): String {
     return properties.getProperty(propertyName) ?: throw IllegalStateException("Property $propertyName not found in any properties file.")
 }
 
-private fun BuildType.configureDebugBuildType(
-    projectVersionName: String
-){
+private fun BuildType.configureDebugBuildType(projectVersionName: String){
+
 }
 
 private fun BuildType.configureReleaseBuildType(
     commonExtension: CommonExtension<*, *, *, *, *>,
     projectVersionName: String
 ){
-
-    isMinifyEnabled = false // 코드 난독화
-    isShrinkResources = false // 리소스 축소
-    proguardFiles( // ProGuard 설정: 코드 최적화
+    isMinifyEnabled = true // 코드 난독화
+    proguardFiles(
         commonExtension.getDefaultProguardFile("proguard-android-optimize.txt"),
         "proguard-rules.pro"
     )
