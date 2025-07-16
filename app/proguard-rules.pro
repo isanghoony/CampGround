@@ -19,3 +19,6 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-keep class com.campground.core.designsystem.theme.ThemeKt { *; }
+-dontwarn com.campground.core.designsystem.theme.ThemeKt

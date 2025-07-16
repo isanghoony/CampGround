@@ -67,7 +67,7 @@ private fun Project.getPropertyFromFiles(propertyName: String): String {
 }
 
 private fun BuildType.configureDebugBuildType(projectVersionName: String){
-
+    isMinifyEnabled = false
 }
 
 private fun BuildType.configureReleaseBuildType(
