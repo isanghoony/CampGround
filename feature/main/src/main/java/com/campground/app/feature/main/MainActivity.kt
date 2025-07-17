@@ -1,4 +1,4 @@
-package com.campground.feature.main
+package com.campground.app.feature.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -13,7 +13,9 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.TextUnitType
 import com.campground.core.designsystem.theme.CampGroundTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity: ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +25,7 @@ class MainActivity: ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
                 ) {
+
                     Text(
                         text = "Hello World!",
                         color = Color.Blue,

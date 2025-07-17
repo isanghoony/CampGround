@@ -3,9 +3,10 @@ plugins {
 }
 
 android {
-    namespace = "com.campground.feature.main"
+    namespace = "com.campground.app.feature.main"
 }
 
 dependencies {
-
+    implementation(projects.core.router.router)
+    implementation(projects.core.router.routerApi)
 }
