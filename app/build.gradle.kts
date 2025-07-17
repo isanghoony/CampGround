@@ -12,7 +12,7 @@ android {
         applicationId = "com.isanghoony.campground"
         minSdk = 26
         targetSdk = 35
-        versionCode = 1
+        versionCode = 2
         versionName = "1.0.1"
 
         buildConfigField(type = "String", name = "API_BASE_URL", value = "\"http://apis.data.go.kr/B551011/GoCamping\"")
@@ -48,5 +48,4 @@ dependencies {
     implementation(projects.core.domain)
 
     implementation(projects.feature.main)
-
 }
