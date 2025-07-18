@@ -188,6 +188,7 @@ android-library = { id = "com.android.library", version.ref = "agp" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 
 # build-logic convention
 campground-android-application = { id = "campground.android.application", version = "unspecified" } # AndroidApplicationConventionPlugin
@@ -198,6 +199,7 @@ campground-android-feature = { id = "campground.android.feature.ui", version = "
 campground-android-hilt = { id = "campground.android.hilt", version = "unspecified" } # AndroidHiltConventionPlugin
 campground-android-retrofit = { id = "campground.android.retrofit", version = "unspecified" } #AndroidRetrofitConventionPlugin
 campground-jvm-library = { id = "campground.jvm.library", version = "unspecified" } #JvmLibraryConventionPlugin
+campground-kotlin-library-serialization = { id = "campground.kotlin.library.serialization", version = "unspecified" } # KotlinLibrarySerializationConventionPlugin
 
 #campground-android-test = { id = "campground.android.test", version = "unspecified"}
 #campground-android-library-jacoco = { id = "campground.android.library.jacoco", version = "unspecified"}

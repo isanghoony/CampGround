@@ -71,5 +71,9 @@ gradlePlugin {
             id = "campground.jvm.library"
             implementationClass = "JvmLibraryConventionPlugin"
         }
+        register("kotlinLibrarySerialization") {
+            id = "campground.kotlin.library.serialization"
+            implementationClass = "KotlinLibrarySerializationConventionPlugin"
+        }
     }
 }
