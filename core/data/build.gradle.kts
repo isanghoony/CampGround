@@ -11,8 +11,4 @@ dependencies {
     implementation(projects.core.common)
     implementation(projects.core.network)
     implementation(projects.core.model)
-
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
 }
