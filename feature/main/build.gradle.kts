@@ -9,4 +9,7 @@ android {
 dependencies {
     implementation(projects.core.router.router)
     implementation(projects.core.router.routerApi)
+
+    implementation(projects.feature.home)
+    implementation(projects.feature.homeApi)
 }

@@ -48,4 +48,6 @@ dependencies {
     implementation(projects.core.domain)
 
     implementation(projects.feature.main)
+    implementation(projects.feature.home)
+    implementation(projects.feature.homeApi)
 }
