@@ -1,10 +1,10 @@
+import com.campground.setNamespace
+
 plugins {
     alias(libs.plugins.campground.android.compose)
 }
 
-android {
-    namespace = "com.campground.core.ui"
-}
+setNamespace("core.ui")
 
 dependencies {
     implementation(projects.core.designsystem)

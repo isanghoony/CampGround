@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.isanghoony.campground",
+  "applicationId": "com.campground.app",
   "variantName": "release",
   "elements": [
     {

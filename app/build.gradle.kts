@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.isanghoony.campground"
+    namespace = "com.campground.app"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.isanghoony.campground"
+        applicationId = "com.campground.app"
         minSdk = 26
         targetSdk = 35
         versionCode = 2

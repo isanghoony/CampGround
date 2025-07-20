@@ -5,7 +5,7 @@
     <application>
 
         <activity
-            android:name="com.campground.feature.main.MainActivity"
+            android:name="com.campground.app.feature.main.MainActivity"
             android:configChanges="uiMode"
             android:exported="true"
             android:theme="@style/Theme.CampGround.TransparentSystemBar">

@@ -1,15 +1,19 @@
+import com.campground.setNamespace
+
 plugins {
     alias(libs.plugins.campground.android.library)
     alias(libs.plugins.campground.android.retrofit)
     alias(libs.plugins.campground.android.hilt)
 }
 
+setNamespace("core.network")
+
 android {
     buildFeatures {
         buildConfig = true
     }
-    namespace = "com.campground.core.network"
 }
+
 dependencies {
     implementation(projects.core.common)
     implementation(projects.core.model)

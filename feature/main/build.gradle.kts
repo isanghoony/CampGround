@@ -1,10 +1,10 @@
+import com.campground.setNamespace
+
 plugins {
     alias(libs.plugins.campground.android.feature)
 }
 
-android {
-    namespace = "com.campground.app.feature.main"
-}
+setNamespace("feature.main")
 
 dependencies {
     implementation(projects.core.router.router)
@@ -12,4 +12,6 @@ dependencies {
 
     implementation(projects.feature.home)
     implementation(projects.feature.homeApi)
+
+    androidTestImplementation(projects.core.testing)
 }

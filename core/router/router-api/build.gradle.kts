@@ -1,10 +1,10 @@
+import com.campground.setNamespace
+
 plugins {
     alias(libs.plugins.campground.android.library)
 }
 
-android {
-    namespace = "com.campground.app.core.router.api"
-}
+setNamespace("core.router.api")
 
 dependencies {
 

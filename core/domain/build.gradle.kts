@@ -1,12 +1,12 @@
+import com.campground.setNamespace
+
 plugins {
     alias(libs.plugins.campground.android.library)
     //alias(libs.plugins.campground.android.library.jacoco)
     id("com.google.devtools.ksp")
 }
 
-android {
-    namespace = "com.campground.core.domain"
-}
+setNamespace("core.domain")
 
 dependencies {
     implementation(projects.core.data)

@@ -4,7 +4,7 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "com.isanghoony.campgtound.buildlogic"
+group = "com.campgtound.buildlogic"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_21

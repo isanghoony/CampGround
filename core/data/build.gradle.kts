@@ -1,11 +1,11 @@
+import com.campground.setNamespace
+
 plugins {
     alias(libs.plugins.campground.android.library)
     alias(libs.plugins.campground.android.hilt)
 }
 
-android {
-    namespace = "com.campground.core.data"
-}
+setNamespace("core.data")
 
 dependencies {
     implementation(projects.core.common)

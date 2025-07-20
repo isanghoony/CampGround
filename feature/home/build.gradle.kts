@@ -1,10 +1,10 @@
+import com.campground.setNamespace
+
 plugins {
     alias(libs.plugins.campground.android.feature)
 }
 
-android {
-    namespace = "com.campground.feature.home"
-}
+setNamespace("feature.home")
 
 dependencies {
     implementation(projects.feature.homeApi)
